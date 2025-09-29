@@ -1,0 +1,335 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Hari Ragavendar S</title>
+    <meta name="description" content="Portfolio of Hari Ragavendar">
+
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Hari Ragavendar S - Portfolio">
+    <meta property="og:description" content="Aspiring Full Stack Developer with expertise in Python, Django, Flask, and Machine Learning">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{% static 'images/me.jpg' %}">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/css.css' %}">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo" data-testid="logo">HR</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" data-testid="nav-home">Home</a></li>
+                <li><a href="#skills" data-testid="nav-skills">Skills</a></li>
+                <li><a href="#projects" data-testid="nav-projects">Projects</a></li>
+                <li><a href="#education" data-testid="nav-education">Education</a></li>
+                <li><a href="#certifications" data-testid="nav-certifications">Certifications</a></li>
+                <li><a href="#contact" data-testid="nav-contact">Contact</a></li>
+                <li><a href="#resume" data-testid="nav-resume">Resume</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" data-testid="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" data-testid="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content fade-in-up">
+            <img src="{% static 'css/HR.jpg' %}" alt="Hari Ragavendar S" class="hero-image" data-testid="hero-image">
+            <h1 data-testid="hero-name">Hari Ragavendar S</h1>
+            <p class="tagline" data-testid="hero-tagline">Building Intelligent apps and scalable solutions with passion</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary" data-action="scroll-to-projects" data-testid="button-view-projects">
+                    <i class="fas fa-code"></i>
+                    View Projects
+                </button>
+                <button class="btn btn-secondary" data-action="scroll-to-contact" data-testid="button-contact-me">
+                    <i class="fas fa-envelope"></i>
+                    Contact Me
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section fade-in-up">
+        <h2 class="section-title" data-testid="skills-title">Skills & Technologies</h2>
+        <div class="skills-container">
+            <div class="skill-category" data-testid="skill-category-frontend">
+                <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag" data-testid="skill-html">HTML</span>
+                    <span class="skill-tag" data-testid="skill-css">CSS</span>
+                    <span class="skill-tag" data-testid="skill-bootstrap">Bootstrap</span>
+                    <span class="skill-tag" data-testid="skill-javascript">JavaScript</span>
+                </div>
+            </div>
+            <div class="skill-category" data-testid="skill-category-backend">
+                <h3><i class="fas fa-server"></i> Backend</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag" data-testid="skill-python">Python</span>
+                    <span class="skill-tag" data-testid="skill-django">Django</span>
+                    <span class="skill-tag" data-testid="skill-flask">Flask</span>
+                </div>
+            </div>
+            <div class="skill-category" data-testid="skill-category-database">
+                <h3><i class="fas fa-database"></i> Database</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag" data-testid="skill-mysql">MySQL</span>
+                    <span class="skill-tag" data-testid="skill-mongodb">MongoDB</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section fade-in-up">
+        <h2 class="section-title" data-testid="projects-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card" data-testid="project-heart-disease">
+                <div class="project-content">
+                    <h3 class="project-title">Heart Disease Prediction System</h3>
+                    <p class="project-description">
+                        A machine learning application that predicts the likelihood of heart disease based on various health parameters. 
+                        Uses advanced ML algorithms to provide accurate predictions and insights for healthcare professionals.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">ML</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Hari-Ragavendar-S/Heart-Disease-prediction" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="btn btn-primary"
+                           data-testid="link-heart-disease-github">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card" data-testid="project-amazon-clone">
+                <div class="project-content">
+                    <h3 class="project-title">Amazon Clone Web App</h3>
+                    <p class="project-description">
+                        A full-featured e-commerce web application that replicates core Amazon functionality including 
+                        product listings, shopping cart, user authentication, and order management.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Bootstrap</span>
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">MongoDB</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Hari-Ragavendar-S/Amazon-clone-webapplication" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="btn btn-primary"
+                           data-testid="link-amazon-clone-github">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        <a href="https://ragavendaramazonclonewebapp.netlify.app/" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="btn btn-secondary"
+                           data-testid="link-amazon-clone-demo">
+                            <i class="fas fa-external-link-alt"></i>
+                            Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section fade-in-up">
+        <h2 class="section-title" data-testid="education-title">Education</h2>
+        <div class="timeline">
+            <div class="timeline-item" data-testid="education-btech">
+                <div class="timeline-content">
+                    <h3>B.Tech Biotechnology</h3>
+                    <p><strong>Muthayammal Engineering College</strong></p>
+                    <p>8.01 CGPA (2020–2024)</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-testid="education-hsc">
+                <div class="timeline-content">
+                    <h3>Higher Secondary Certificate (HSC)</h3>
+                    <p><strong>Little Flower School, Salem</strong></p>
+                    <p>58%</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-testid="education-sslc">
+                <div class="timeline-content">
+                    <h3>Secondary School Leaving Certificate (SSLC)</h3>
+                    <p><strong>Modern Matriculation School</strong></p>
+                    <p>81%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section fade-in-up">
+        <h2 class="section-title" data-testid="certifications-title">Certifications</h2>
+        <div class="timeline">
+            <div class="timeline-item" data-testid="certification-fullstack">
+                <div class="timeline-content">
+                    <h3>Full Stack Python Developer</h3>
+                    <p><strong>Refinement Software Solution</strong></p>
+                    <p>Comprehensive training in full-stack web development using Python technologies</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-testid="certification-python">
+                <div class="timeline-content">
+                    <h3>Python Programming</h3>
+                    <p><strong>Terv Tribe</strong></p>
+                    <p>Advanced Python programming concepts and practical applications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="section fade-in-up">
+        <h2 class="section-title" data-testid="resume-title">Resume</h2>
+        <div class="resume-content">
+            <div class="resume-summary">
+                <p class="project-description">
+                    Download my resume to learn more about my experience, skills, and achievements in software development.
+                    Get detailed information about my projects, education, and technical expertise.
+                </p>
+                <button class="btn btn-primary" id="downloadResume" data-testid="button-download-resume">
+                    <i class="fas fa-download"></i>
+                    <a href="https://drive.google.com/file/d/1yOmv8-F2mBaHe5Pyy_cGtjxXnpg2ajDO/view?usp=sharing">Download Resume (PDF)</a>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section fade-in-up">
+        <h2 class="section-title" data-testid="contact-title">Get In Touch</h2>
+
+        <form class="contact-form" id="contactForm" data-testid="contact-form" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required data-testid="input-name">
+                <span class="error-message" id="nameError"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required data-testid="input-email">
+                <span class="error-message" id="emailError"></span>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required data-testid="textarea-message"></textarea>
+                <span class="error-message" id="messageError"></span>
+            </div>
+            <button type="submit" class="btn btn-primary" data-testid="button-send-message">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+            </button>
+        </form>
+
+        <div class="success-message" id="successMessage" style="display:none;">
+            <i class="fas fa-check-circle"></i>
+            Thank you! Your message has been sent successfully.
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://github.com/Hari-Ragavendar-S" target="_blank" rel="noopener noreferrer" aria-label="GitHub" data-testid="link-github">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/hari-ragavendar-s" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" data-testid="link-linkedin">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+        <p class="footer-text" data-testid="footer-copyright">© 2025 Hari Ragavendar S. All rights reserved.</p>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="{% static 'css/js.js' %}"></script>
+
+    <!-- AJAX Contact Form Bug Fix -->
+    <script>
+    (function() {
+        function getCsrfToken() {
+            const el = document.querySelector('input[name="csrfmiddlewaretoken"]');
+            return el ? el.value : '';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const successDiv = document.getElementById('successMessage');
+
+            if (!form) return;
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const formData = new FormData(form);
+
+                fetch("{% url 'contact' %}", {  // Ensure correct Django URL for POST
+                    method: 'POST',
+                    headers: {
+                        'X-CSRFToken': getCsrfToken()
+                    },
+                    body: formData,
+                    credentials: 'same-origin'
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        successDiv.style.display = 'block';
+                        form.reset();
+                        setTimeout(() => { successDiv.style.display = 'none'; }, 3000);
+                    } else if(data.status === 'error') {
+                        alert(data.message || 'Something went wrong.');
+                    } else {
+                        alert('Unexpected response from server.');
+                    }
+                })
+                .catch(err => {
+                    console.error('Contact form error:', err);
+                    alert('Error sending message.');
+                });
+            });
+        });
+    })();
+    </script>
+</body>
+</html>
